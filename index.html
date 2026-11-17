@@ -112,60 +112,16 @@
 
     <section class="projects" id="projects">
         <h2 class="heading"><span>My</span> Projects</h2>
+        <p class="projects-intro">Maps, models and tools from my work in marine science and GIS. Open a map card to
+            browse the full-size layouts.</p>
 
-        <div class="projects-container">
-            <div class="projects-box">
-                <div class="img-project1">
-                    <img src="assets/bycatch3.png" alt="Shark Bycatch">
-                </div>
-                <h3>Shark Bycatch Management in Demersal Fisheries</h3>
-                <p></p>
-            </div>
-
-            <div class="projects-box">
-                <div class="img-project2">
-                    <a href="https://radiant-nova.github.io/Roshin-Syahdan/" target="_blank"><img
-                            src="assets/portfolio.png" alt="Portfolio"></a>
-                </div>
-                <h3>Portfolio</h3>
-                <p></p>
-            </div>
-
-            <div class="projects-box">
-                <div class="img-project3">
-                    <a href="https://plasticdiet.id/pasar-bebas-plastik-banjarmasin/" target="_blank"><img
-                            src="assets/gidkp.webp" alt="Gidkp"></a>
-                </div>
-                <h3>Plastic Free Markets Establishment in Banjarmasin</h3>
-                <p></p>
-            </div>
-
-            <div class="projects-box">
-                <div class="img-project4">
-                    <img src="assets/xgboost.png" alt="XGBoost">
-                </div>
-                <h3>Triaenodon Obesus XGBoost Distribution Modelling</h3>
-                <p></p>
-            </div>
-
-            <div class="projects-box">
-                <div class="img-project5">
-                    <a href="https://plugins.qgis.org/plugins/extent_matcher/" target="_blank"><img
-                            src="assets/extentmatcher.png" alt="QGIS Plugin"></a>
-                </div>
-                <h3>QGIS Plugin: Extent Matcher</h3>
-                <p></p>
-            </div>
-
-            <div class="projects-box">
-                <div class="img-project6">
-                    <a href="https://radiant-nova.github.io/kaydentfix/" target="_blank"><img src="assets/kaydent.png"
-                            alt="Kaydent Dental Care"></a>
-                </div>
-                <h3>Kaydent Dental Care Website</h3>
-                <p></p>
-            </div>
-        </div>
+        <!-- Filter chips, cards and the gallery are generated from projects-data.js -->
+        <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects"></div>
+        <p class="projects-count" id="projects-count" aria-live="polite"></p>
+        <div class="projects-grid" id="projects-grid"></div>
+        <noscript>
+            <p class="projects-intro">Please enable JavaScript to view the project gallery.</p>
+        </noscript>
     </section>
 
     <!-- Contact Section Code -->
@@ -204,9 +160,44 @@
         </div>
     </footer>
 
+    <!-- Project gallery lightbox (filled by projects.js) -->
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+        <div class="lb-backdrop" data-close></div>
+        <div class="lb-panel">
+            <button class="lb-close" type="button" data-close aria-label="Close gallery"><i
+                    class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+
+            <div class="lb-stage">
+                <button class="lb-nav lb-prev" type="button" aria-label="Previous image"><i
+                        class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                <img id="lb-img" alt="">
+                <button class="lb-nav lb-next" type="button" aria-label="Next image"><i
+                        class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                <span class="lb-counter" id="lb-counter"></span>
+            </div>
+
+            <aside class="lb-info">
+                <p class="lb-cat" id="lb-cat"></p>
+                <h3 id="lb-title"></h3>
+                <p class="lb-sub" id="lb-sub"></p>
+                <p class="lb-caption" id="lb-caption"></p>
+                <div class="lb-facts" id="lb-facts"></div>
+                <p class="lb-desc" id="lb-desc"></p>
+                <div class="lb-tabs" id="lb-tabs" role="tablist" aria-label="Images in this project"></div>
+                <div class="lb-links" id="lb-links"></div>
+                <a class="project-link lb-full" id="lb-full" href="#" target="_blank" rel="noopener"><i
+                        class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>Open full
+                    size</a>
+            </aside>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="projects-data.js"></script>
+    <script src="projects.js"></script>
     <script src="script.js"></script>
 
 

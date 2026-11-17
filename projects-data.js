@@ -111,6 +111,53 @@ const PROJECTS = [
         ]
     },
     {
+        id: 'shark-occurrence-spermonde',
+        title: 'Shark Occurrence Points with Bathymetry and Habitat Classification',
+        subtitle: 'Langkai & Lanjukang Islands, Spermonde Archipelago',
+        category: 'maps',
+        description: 'Occurrence points of three shark species (silky, whitetip reef and blacktip reef shark) ' +
+            'plotted over bathymetric contours and a benthic habitat classification (reef extent, coral reef, ' +
+            'microalgal mats, rock, rubble and sand) around Langkai and Lanjukang Islands in the Makassar Strait.',
+        tags: ['QGIS', 'Bathymetry', 'Habitat mapping', 'Sharks', 'Species occurrence'],
+        cover: 'assets/thumbs/fondasi_titik_temu_cover.jpg',
+        fit: 'cover',
+        gallery: [
+            {
+                label: 'All species',
+                src: 'assets/fondasi_titik_temu_full.jpg',
+                thumb: 'assets/thumbs/fondasi_titik_temu_all.jpg',
+                caption: 'Side-by-side occurrence maps with the full legend: (a) silky shark, (b) whitetip reef ' +
+                    'shark, (c) blacktip reef shark.',
+                facts: [
+                    { label: 'Species', value: '3' },
+                    { label: 'Occurrence records', value: '57 / 90 / 60' },
+                    { label: 'Map extent', value: '119.00–119.20°E' }
+                ]
+            },
+            {
+                label: '(a) Silky shark',
+                src: 'assets/fondasi_titik_temu_a.jpg',
+                thumb: 'assets/thumbs/fondasi_titik_temu_a.jpg',
+                caption: 'Silky shark: 57 occurrence records.',
+                facts: [{ label: 'Records', value: '57' }]
+            },
+            {
+                label: '(b) Whitetip reef shark',
+                src: 'assets/fondasi_titik_temu_b.jpg',
+                thumb: 'assets/thumbs/fondasi_titik_temu_b.jpg',
+                caption: 'Whitetip reef shark: 90 occurrence records.',
+                facts: [{ label: 'Records', value: '90' }]
+            },
+            {
+                label: '(c) Blacktip reef shark',
+                src: 'assets/fondasi_titik_temu_c.jpg',
+                thumb: 'assets/thumbs/fondasi_titik_temu_c.jpg',
+                caption: 'Blacktip reef shark: 60 occurrence records.',
+                facts: [{ label: 'Records', value: '60' }]
+            }
+        ]
+    },
+    {
         id: 'shark-bycatch',
         title: 'Shark Bycatch Management in Demersal Fisheries',
         subtitle: 'Fisheries & conservation',
